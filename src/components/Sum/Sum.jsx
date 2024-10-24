@@ -1,15 +1,13 @@
-// export const Sum = () => ();
 import React from 'react';
+import './App.scss';
+import { Sum } from './components/Sum/Sum';
 
-function Sum({ a = 0, b = 0 }) {
-  const sum = a + b;
-
-  return (
-    <div>
-      <h1>Soma</h1>
-      <p>A soma de {a} e {b} é {sum}</p>
-    </div>
-  );
-}
-
-export default Sum; // Exportação padrão
+export const App = () => (
+  <>
+    <Sum a={2} b={3} />
+    <Sum a={-5} b={5} />
+    <Sum a={10} b={0} />
+    <Sum a={0} b={5} />
+    <Sum a={0} b={0} />
+  </>
+);
